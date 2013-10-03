@@ -38,6 +38,22 @@ Simple installation with NPM
 
 ## API
 
+## New Instance
+You must first connect to a redis server using the [redis client](https://github.com/mranney/node_redis) and pass the client instance to the constructor.
+
+    var redis = require("redis"),
+    	ScriptManager = require("redis-scripts");
+
+    //Connect to Redis
+    client = redis.createClient();
+
+    // Create the script manager instance using the redis client
+    client.on("ready", function (err) {
+		var sm = new ScriptManager(client);
+	});
+	
+Keeping your script loading code on the `ready` event handler will reload all your scripts every time you reconect to redis.
+
 ## scriptManager.load(command, scriptFile, callback)
 
 Load a file containing a Lua script into Redis and create a new command in the script manager object.
