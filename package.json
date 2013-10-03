@@ -1,5 +1,5 @@
 {
-    "name": "Redis-Scripts",
+    "name": "redis-scripts",
     "version": "0.1.0",
     "author" : "Pedro Paixao <paixaop@gmail.com>",
     "keywords":["redis", "scripts", "lua", "manager"],
@@ -13,11 +13,11 @@
     },
     "readmeFilename": "README.md",
     "dependencies": {
-        "redis" : ">=0.7.1"
-      , "should"  : ""
+        "redis" : ">=0.7.1",
+        "should"  : ""
     },
     "script": {
         "test": "make test",
-        "cover": "make test-cov",
+        "cover": "make test-cov"
     }
 }
