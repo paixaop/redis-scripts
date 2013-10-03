@@ -90,7 +90,7 @@ Now from your application call:
         });
     });
 
-The load process will determine the number of Redis Keys your script needs by analysing the number of elements in the KEYS lua table.
+The load process will determine the number of Redis Keys your script needs by  the number of elements in the KEYS lua table.
 
 ## scriptManager.getNumberOfKeys(command)
 Return the number of Redis Keys the `command` script needs to run properly.
@@ -105,7 +105,7 @@ Load all Lua scripts found in `path` into Redis. Scripts that start with `_` or 
 Scripts must have a `.lua` extension.
 
 # Testing
-Tests require Node mocha and instanbul modules to be installed globaly.
+Tests require Node mocha and  modules to be installed .
 
     npm install mocha istanbul -g
 
