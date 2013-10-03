@@ -105,7 +105,7 @@ Load all Lua scripts found in `path` into Redis. Scripts that start with `_` or 
 Scripts must have a `.lua` extension.
 
 # Testing
-Tests require Node mocha and  modules to be installed .
+Tests require Node mocha and istanbul modules to be installed .
 
     npm install mocha istanbul -g
 
