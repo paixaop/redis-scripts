@@ -17,25 +17,25 @@ Simple installation with NPM
 
     client.on("error", function (err) {
         console.log("Error " + err);
-    });    
-    
+    });
+
     client.on("ready", function (err) {
 		var sm = new ScriptManager(client);
-		
+
 		// Load all Lua scripts in a directory into Redis
 		sm.loadScriptsFromDirectory("./lua", function (err) {
              if (err) {
                 console.log("Error " + err);
                 process.exit(1);
              }
-             
+
              // If your directory included a script called incrbyone.lua
              // you can now call it directly from the ScriptManager object
              sm.incrbyone('key');
         });
-    });    
-    
-    
+    });
+
+
 ## API
 
 ## scriptManager.load(command, scriptFile, callback)
@@ -89,9 +89,9 @@ Now from your application call:
             process.exit();
         });
     });
-  
+
 The load process will determine the number of Redis Keys your script needs by analysing the number of elements in the KEYS lua table.
-    
+
 ## scriptManager.getNumberOfKeys(command)
 Return the number of Redis Keys the `command` script needs to run properly.
 If command does not exist, returns `-1`.
@@ -108,21 +108,19 @@ Scripts must have a `.lua` extension.
 Tests require Node mocha and instanbul modules to be installed globaly.
 
     npm install mocha istanbul -g
-    
+
 To run all module tests simply run:
 
     npm test
-    
+
 or
 
     make test
-    
+
 To obtain a test coverage report run
 
     npm cover
 
 #License
-Same license as Node.js itself
 
-[Node License](https://raw.github.com/joyent/node/v0.10.20/LICENSE)
-
+MIT License
