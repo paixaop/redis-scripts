@@ -1,0 +1,23 @@
+{
+    "name": "Redis-Scripts",
+    "version": "0.1.0",
+    "author" : "Pedro Paixao <paixaop@gmail.com>",
+    "keywords":["redis", "scripts", "lua", "manager"],
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/mit-license.php"
+    }],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ppaixao/redis-scripts.git"
+    },
+    "readmeFilename": "README.md",
+    "dependencies": {
+        "redis" : ">=0.7.1"
+      , "should"  : ""
+    },
+    "script": {
+        "test": "make test",
+        "cover": "make test-cov",
+    }
+}
